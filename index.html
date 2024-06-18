@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清水寺紹介</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Kosugi Maru', sans-serif;
+            font-size: 8em;
+            margin: 0;
+            animation: brushAnimation 5s ease-in-out;
+        }
+        .content-wrapper {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .sub-title {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .content ul {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .content ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .audio-control {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+        .audio-control img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            animation: rotate 4s linear infinite;
+        }
+        #start-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 10;
+        }
+        @keyframes brushAnimation {
+            0% {
+                clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            }
+            100% {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="start-overlay" onclick="startAudio()"></div>
+
+<video class="video-background" autoplay loop muted>
+    <source src="images/tera.MP4" type="video/mp4">
+    お使いのブラウザはビデオタグをサポートしていません。
+</video>
+
+<audio id="background-music" loop>
+    <source src="images/tera.mp3" type="audio/mpeg">
+    お使いのブラウザはオーディオタグをサポートしていません。
+</audio>
+
+<div class="header">
+    <h1>清水寺</h1>
+</div>
+
+<div class="content-wrapper">
+    <div class="header-title">清水寺の物語を紐解く</div>
+    <div class="sub-title">清水寺の歴史</div>
+    <div class="content">
+        <p>清水寺（きよみずでら）は、京都市東山区に位置する名刹で、日本の文化と歴史を代表する象徴的な寺院です。清水寺は780年に延鎮上人によって創建され、その名前の由来となった「清水の滝」から命名されました。寺院の歴史は長く、数々の災害や戦乱を乗り越えてきました。日本の文化遺産としても高く評価され、多くの国宝や重要文化財を有しています。</p>
+
+        <p>清水寺の本堂は「清水の舞台」として知られ、京都市内を一望できる絶景スポットです。この舞台は断崖絶壁に建てられ、木造の構造物としては非常に壮大で見事です。本堂の前には広い桧舞台が広がり、その下を流れる清水の滝の水音が聞こえます。この景色は四季折々に変化し、春の桜、夏の青々とした緑、秋の紅葉、冬の雪景色と、どの季節に訪れても美しい景色を楽しむことができます。</p>
+
+        <h2 class="sub-title">清水寺の見どころ</h2>
+        <p>以下は清水寺の主要な見どころです：</p>
+
+        <ul>
+            <li><strong>清水の舞台</strong>：清水寺を訪れる多くの観光客が一番に目指すのが「清水の舞台」です。この舞台は高さ13メートルの場所に建てられており、京都市内を一望することができます。舞台は檜の柱と梁で支えられており、その構造美は圧巻です。日本の伝統的な木造建築の技術が凝縮されており、その耐久性と美しさは多くの人々を魅了します。</li>
+
+            <li><strong>音羽の滝</strong>：清水寺の名前の由来となった「音羽の滝」は、本堂のすぐ近くに位置しています。この滝は三つの流れに分かれており、それぞれが健康、学業、恋愛のご利益をもたらすとされています。観光客はこの滝の水を飲むことでご利益を得ることができ、清水寺の中でも特に人気のあるスポットです。滝の水は冷たく、清らかな味わいが特徴です。</li>
+
+            <li><strong>地主神社</strong>：清水寺の境内には「地主神社」という縁結びの神社があります。この神社は恋愛成就のパワースポットとして有名で、多くのカップルや婚活中の人々が訪れます。神社の境内には「恋占いの石」と呼ばれる二つの石があり、目を閉じてこの石の間を歩き渡ることができれば、恋愛が成就すると言われています。地主神社は、特に若い世代の観光客に人気があります。</li>
+
+            <li><strong>三重塔</strong>：清水寺の象徴の一つである「三重塔」は、高さ31メートルの美しい塔です。この塔は境内の高台に建てられており、京都市内を一望することができます。三重塔の内部には仏像が安置されており、塔の外観とともに内観も見応えがあります。秋には三重塔の周りが紅葉に彩られ、その美しさは言葉では表現できないほどです。</li>
+
+            <li><strong>阿弥陀堂</strong>：清水寺の本尊として阿弥陀如来を祀る「阿弥陀堂」も見逃せないスポットです。この堂は、本尊の阿弥陀如来像が安置されている場所で、多くの参拝者が訪れます。阿弥陀堂からも京都市内の景色を楽しむことができ、その静寂と荘厳な雰囲気は訪れる人々の心を落ち着かせます。</li>
+        </ul>
+
+        <h2 class="sub-title">清水寺の歴史と文化</h2>
+        <p>清水寺の歴史は非常に古く、その創建は奈良時代にまで遡ります。寺院の創建者である延鎮上人は、音羽の滝の水を飲んでこの地に寺を建てることを決意しました。その後、清水寺は多くの僧侶や信者に支えられ、繁栄を続けてきました。</p>
+
+        <p>平安時代には、清水寺は貴族や皇族の信仰を集める重要な寺院となりました。この時代には、清水寺を訪れる貴族たちが舞台から眺める景色を詠んだ和歌が多く残されています。また、鎌倉時代には、源頼朝や北条氏などの武家政権からも篤い信仰を受けました。</p>
+
+        <p>戦国時代には、清水寺も度重なる戦火に見舞われましたが、その都度再建され、現在の姿を保っています。江戸時代には、徳川家康や徳川家光などの将軍家からも信仰を受け、大規模な修復や再建が行われました。この時期に建てられた多くの建造物は、現在も重要文化財として保存されています。</p>
+
+        <h2 class="sub-title">清水寺の年間行事</h2>
+        <p>清水寺では年間を通じて多くの行事やイベントが開催されます。これらの行事は、参拝者にとって特別な体験となり、清水寺の信仰と伝統を感じることができます。</p>
+
+        <ul>
+            <li><strong>音羽山観音大祭</strong>：毎年2月には「音羽山観音大祭」が開催されます。この祭りは、清水寺の本尊である千手観音を祝う行事で、多くの参拝者が訪れます。祭りでは、千手観音像が特別に公開され、多くの人々が祈りを捧げます。</li>
+            <li><strong>花まつり</strong>：4月には「花まつり」が行われます。これはお釈迦様の誕生日を祝う行事で、境内は色とりどりの花で飾られます。参拝者は甘茶をいただき、お釈迦様の誕生を祝います。</li>
+
+            <li><strong>清水の舞台ライトアップ</strong>：春と秋には、清水の舞台がライトアップされます。夜間に訪れると、幻想的な雰囲気の中で舞台や三重塔を楽しむことができます。特に桜の季節や紅葉の時期には、その美しさが一層際立ちます。</li>
+
+            <li><strong>千日詣り</strong>：8月には「千日詣り」が行われます。この行事は、千日分のご利益が得られるとされる特別な日です。多くの参拝者が清水寺を訪れ、心身を清め、祈りを捧げます。</li>
+        </ul>
+
+        <h2 class="sub-title">清水寺の訪問のポイント</h2>
+        <p>清水寺を訪れる際には、以下のポイントを押さえておくと、より一層楽しむことができます。</p>
+
+        <ul>
+            <li><strong>早朝訪問</strong>：清水寺は非常に人気のある観光地で、特に昼間は多くの観光客で賑わいます。静かで落ち着いた雰囲気を楽しみたい場合は、早朝に訪れることをおすすめします。朝の光の中で見る清水の舞台や音羽の滝は格別です。</li>
+
+            <li><strong>季節ごとの魅力</strong>：清水寺は四季折々の景色が楽しめる場所です。春には桜、夏には青々とした木々、秋には紅葉、冬には雪景色と、訪れる季節によって異なる美しさを堪能できます。それぞれの季節に合わせて訪問するのも良いでしょう。</li>
+
+            <li><strong>周辺の観光スポット</strong>：清水寺の周辺には、他にも多くの観光スポットがあります。例えば、二年坂や三年坂といった歴史的な街並みや、茶屋での休憩も楽しめます。また、八坂神社や高台寺も近くにあり、一日で複数の名所を巡ることができます。</li>
+        </ul>
+
+        <h2 class="sub-title">清水寺の未来</h2>
+        <p>清水寺は、過去から現在に至るまで多くの人々に愛され、支えられてきました。これからもその伝統と文化を守り続け、次世代へと受け継がれていくことでしょう。清水寺の美しい景色と静寂な雰囲気は、訪れる人々の心を癒し、深い感動を与え続けることでしょう。</p>
+
+        <p>また、清水寺は環境保護や持続可能な観光を推進しています。多くの観光客が訪れる中で、自然環境を守り、文化財を保存するための取り組みが行われています。訪れる人々も、清水寺の美しさと歴史を尊重し、大切にしていくことが求められます。</p>
+
+        <p>清水寺は、日本の歴史と文化を感じることができる貴重な場所です。訪れるたびに新たな発見があり、その美しさと荘厳さは訪れる人々の心に深く刻まれます。ぜひ一度は訪れてみてください。</p>
+    </div>
+
+<div class="audio-control">
+    <img src="images/music.jpeg"  onclick="toggleAudio()">
+</div>
+
+
+<script>
+    function startAudio() {
+        var audio = document.getElementById('background-music');
+        audio.play().then(() => {
+            document.getElementById('start-overlay').style.display = 'none';
+        }).catch((error) => {
+            console.log('Auto-play was prevented:', error);
+        });
+    }
+
+    function toggleAudio() {
+        var audio = document.getElementById('background-music');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+</body>
+</html>
